@@ -1,0 +1,55 @@
+            ALL TASK
+
+1. Write `hello world` into the html using node
+- Add a variable or array and show value to the browser
+2. top 10 records from the student_express table
+3. write 10 queries into workbench (use both parameters of LIMIT)
+4. Retrieve the first 10 record using express and show to the homepage
+5. write 10 queries into express (use both parameters of LIMIT)
+6. 10 tables using express 
+
+
+
+ <% for(let i= parseInt(page) ;i<= parseInt(page)+10; i--){ %>
+                        <li class="page-item"><a class="page-link 
+                           
+                            " href="/show?page=<%= i %>"><%= i %></a></li>
+                    <% } %> 
+
+
+<% if(page>=1){ %> 
+                        <% for(let i=page;i<=parseInt(page)+10;i++){ %>
+                            <li class="page-item"><a class="page-link 
+                                <% if(page==i){ %> 
+                                    active
+                                <% } %>
+                                " href="/show?page=<%= i %>"><%= i %></a></li>
+                        <% }
+                    } %> 
+
+
+                     <% if(parseInt(page)==i){ %> 
+                                active
+                            <% } %> 
+
+
+
+
+
+                            saved worked
+                            <% for(let i=page;i<=parseInt(page)+10;i++){ %>
+                        <li class="page-item"><a class="page-link 
+                            <% if(page==i){ %> 
+                                active
+                            <% } %>
+                            " href="/show?page=<%= i %>"><%= i %></a></li>
+                    <% } %>
+
+                    decrease
+                    <% for(let i=parseInt(page) + 10;i>=parseInt(page);i--){ %>
+                        <li class="page-item"><a class="page-link 
+                            <% if(page==i){ %> 
+                                active
+                            <% } %>
+                            " href="/show?page=<%= i %>"><%= i %></a></li>
+                    <% } %>

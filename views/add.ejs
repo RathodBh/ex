@@ -1,0 +1,38 @@
+<%- include('header'); -%>
+
+  <div class="container">
+    <form action="/addPost" method="POST">
+      <h2 class="text-primary my-5">Insert data</h2>
+      <div class="mb-3 mt-3">
+        <label for="firstName" class="form-label">firstName:</label>
+        <input type="firstName" class="form-control" id="firstName" placeholder="Enter firstName" name="firstName">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="lastName" class="form-label">lastName:</label>
+        <input type="lastName" class="form-control" id="lastName" placeholder="Enter lastName" name="lastName">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="contactNumber" class="form-label">contactNumber:</label>
+        <input type="contactNumber" class="form-control" id="contactNumber" placeholder="Enter contactNumber"
+          name="contactNumber">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="emailId" class="form-label">emailId:</label>
+        <input type="emailId" class="form-control" id="emailId" placeholder="Enter emailId" name="emailId">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="city" class="form-label">city:</label>
+        <input type="city" class="form-control" id="city" placeholder="Enter city" name="city">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="collageId" class="form-label">collageId:</label>
+        <input type="collageId" class="form-control" id="collageId" placeholder="Enter collageId" name="collageId">
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <%- include('footer'); -%>

@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+
+    <style>
+        #img1 {
+            width: 100%;
+            height: calc(100vh - 70px);
+            object-fit: cover;
+        }
+    </style>
+    <div class="container img-fluid">
+        <img src="" alt="Random Image" id="img1">
+    </div>
+
+    <script type="text/javascript">
+        let link1 = `https://api.unsplash.com/photos/random?query=code&client_id=8ZfU9LVjnK-S2TCqW0pW8oyfe1xw_gzpCHo7MCgPMs8`
+        // let link1 = `https://api.unsplash.com/photos/random?query=code&client_id=8ZfU9LVjnK-S2TCqW0pW8oyfe1xw_gzpCHo7MCgPMs8`
+        fetch(link1).then((response) => {
+            return response.json();
+        }).then((data) => {
+            console.log(data);
+            document.getElementById("img1").src = data.urls.full
+        })
+    </script>
+    
+<%- include('footer'); -%>
